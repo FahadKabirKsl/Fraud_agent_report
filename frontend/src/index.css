@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+.form-control-custom {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-select-custom {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-select-custom:focus,
+.form-control-custom:focus {
+  border-color: #adb5bd;
+  box-shadow: none;
+}
+
+.vector {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: inline-block;
+}
+
+.link:hover {
+  color: green;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: green;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.text {
+  font-weight: normal;
+  transition: all 0.3s;
+}
+
+.link:hover .text {
+  font-weight: bold;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.no-border {
+  border: none;
+}
+.border-left {
+  border-left: 1px solid black;
+}
+@media (max-width: 768px) {
+  .border-left {
+    border-left: none;
+    border-top: 5px solid black;
+  }
+}
+
+.agent-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.agent-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da !important;
+  border-radius: 5px;
+}
+.scrollable-incident-list {
+  max-height: 100px; /* Set your desired max height here */
+  overflow-y: auto;
+}
+.scrollable-incident-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable-incident-list::-webkit-scrollbar-thumb {
+  background-color: #ff0000; /* Red color for the thumb */
+  border-radius: 5px;
+}
+
+.scrollable-incident-list::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Light gray color for the track */
+  border-radius: 5px;
+}
+/* .agent-image {
+  width: 50px;
+  height: 50px;
+} */
+
+.custom-nav {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.custom-nav .nav-link {
+  color: #495057;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  transition: all 0.3s;
+}
+
+.custom-nav .nav-link:hover {
+  color: #007bff;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.custom-nav .nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.red-color {
+  color: red;
+}
+
+.card-status {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card-safe {
+  background-color: #28a745; /* Green for Safe */
+  color: #fff; /* White text color */
+}
+
+.card-fraud {
+  background-color: #dc3545; /* Red for Fraud */
+  color: #fff; /* White text color */
+}
+.attempt-fraud-text {
+  color: red;
+  font-weight: bold;
+}
